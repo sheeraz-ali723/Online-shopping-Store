@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Css/Store.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+            crossorigin="anonymous"
+        />
+    <title>Online Shopping Store</title>
+</head>
+<body>
+    <header>
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+    <a class="navbar-brand" href="#">Shopping <span class="span-1">Store</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+   
+          <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+
+          <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+    
+
+    </header>
+     
+<div class="main-imagepart">
+    <div class="background-image">
+            <h1>“Shop Smarter, Live Better”</h1>
+         <p>Find everything you need in one place.</p>
+         <h2>“Discover Premium Products <br> at Unbeatable Prices”</h2>
+         <p>Luxury, fashion, and lifestyle in one place.</p>
+    </div>
+</div>
+
+<div class="container-fluid fluid-01">
+    <div class="row">
+        <div class="col-lg-6 part-1">
+            <p>📱 Display: 6.1-inch Super Retina XDR OLED</p>
+            <p>⚡ Processor: A16 Bionic chip (6-core CPU, 5-core GPU)</p>
+            <p>📸 Rear Camera: 48MP (main) + 12MP (ultra-wide)</p>
+            <p>💾 Storage: 128GB / 256GB / 512GB</p>
+            <p>📶 Network: 5G supported</p>
+            <p>📡 Connectivity: Wi-Fi 6, Bluetooth 5.3, NFC</p>
+        </div>
+        <div class="col-lg-6 part-2">
+            <img src="../Assets/iphone15.avif" alt="">
+        </div>
+    </div>
+</div>
+
+
+
+<!-- FILTER BUTTONS -->
+<div class="text-center my-4">
+  <button onclick="filterProducts('All')" class="btn btn-dark">All</button>
+  <button onclick="filterProducts('Phone')" class="btn btn-dark">Phones</button>
+  <button onclick="filterProducts('Watch')" class="btn btn-dark">Watches</button>
+  <button onclick="filterProducts('AirPods')" class="btn btn-dark">AirPods</button>
+</div>
+
+<!-- PRODUCT GRID -->
+<div id="product-container" class="container my-4">
+  <div class="row" id="product-row"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script>
+var elem = document.querySelector('.carousel');
+
+var flkty = new Flickity(elem, {
+  cellAlign: 'left',
+  contain: true,
+  autoPlay: true,
+  wrapAround: true,
+  prevNextButtons: true,
+  pageDots: true
+});
+</script>
+   <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"
+        ></script>
+    <script src="../Js/Store.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+  AOS.init();
+</script>
+</body>
+</html>
