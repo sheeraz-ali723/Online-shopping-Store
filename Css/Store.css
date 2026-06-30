@@ -47,7 +47,9 @@ body{
     color: slateblue;
 }
 .fluid-01{
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
+    padding-bottom: 40px;
 }
 .part-1{
     background-color:rgba(128, 128, 128, 0.568);
@@ -137,4 +139,26 @@ body{
 .border-bottom{
   background-color: darkgray;
 
+}
+.part-2 img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+}
+@media (max-width: 400px) {
+  button.btn {
+    flex: 1 1 45%;
+  }
+}
+@media (min-width: 768px) {
+  .search-input {
+    width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .search-input {
+    width: 100%;
+  }
 }
