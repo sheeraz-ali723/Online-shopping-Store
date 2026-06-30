@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="Css/Store.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
        <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
             rel="stylesheet"
@@ -42,10 +42,27 @@
         </li>
       
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+    <form class="d-flex">
+  <input 
+    type="search"
+    class="form-control me-2 w-50"
+    placeholder="Search products..."
+    oninput="searchProducts(this.value)"
+  >
+
+  <button class="btn btn-outline-success" type="button">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+
+  <div class="cart-icon">
+    <i class="fa-solid fa-cart-shopping"
+       data-bs-toggle="offcanvas"
+       data-bs-target="#offcanvasRight">
+    </i>
+
+    <span id="cart-count">0</span>
+  </div>
+</form>
     </div>
   </div>
 </nav>
@@ -64,6 +81,7 @@
 </div>
 
 <div class="container-fluid fluid-01">
+    <p class="fluid-p">Iphone 15</p>
     <div class="row">
         <div class="col-lg-6 part-1">
             <p>📱 Display: 6.1-inch Super Retina XDR OLED</p>
@@ -99,6 +117,7 @@
 
 
 
+<div class="row" id="product-row"></div>
 
 
 
@@ -107,6 +126,21 @@
 
 
 
+
+
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 id="offcanvasRightLabel">Shopping Cart</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="p-2 border-bottom">
+  <h5>Total: <span id="cart-total">PKR 0</span></h5>
+</div>
+  <div class="offcanvas-body" id="cart-body">
+  <p>Your cart is empty</p>
+</div>
+</div>
 
 
 
